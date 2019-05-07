@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "postcode": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

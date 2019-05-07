@@ -1,0 +1,356 @@
+{
+    "title": "HSBC UK",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/hsbc.com/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.hsbc.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_open_banking_v1_2_atms": {
+            "main": "./lib/actions/get_open_banking_v1_2_atms.js",
+            "title": "This API will return data about all our ATMs and is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "description": "This API will return data about all our ATMs and is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_open_banking_v1_2_atms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_open_banking_v1_2_branches": {
+            "main": "./lib/actions/get_open_banking_v1_2_branches.js",
+            "title": "This API will return the branch details for all branches and is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "description": "This API will return the branch details for all branches and is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_open_banking_v1_2_branches.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_open_banking_v1_2_business_current_accounts": {
+            "main": "./lib/actions/get_open_banking_v1_2_business_current_accounts.js",
+            "title": "This API will return data about all BCA productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "description": "This API will return data about all BCA productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_open_banking_v1_2_business_current_accounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_open_banking_v1_2_commercial_credit_cards": {
+            "main": "./lib/actions/get_open_banking_v1_2_commercial_credit_cards.js",
+            "title": "This API will return data about all commercial credit cards productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "description": "This API will return data about all commercial credit cards productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_open_banking_v1_2_commercial_credit_cards.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_open_banking_v1_2_personal_current_accounts": {
+            "main": "./lib/actions/get_open_banking_v1_2_personal_current_accounts.js",
+            "title": "This API will return data about all PCA productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "description": "This API will return data about all PCA productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_open_banking_v1_2_personal_current_accounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_open_banking_v1_2_unsecured_sme_loans": {
+            "main": "./lib/actions/get_open_banking_v1_2_unsecured_sme_loans.js",
+            "title": "This API will return data about all SME lending productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "description": "This API will return data about all SME lending productsand is prepared to the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. It is regulated by the UK Competition and Markets Authority (CMA). Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_open_banking_v1_2_unsecured_sme_loans.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_atms_country__country_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_atms_country__country_.js",
+            "title": "This extended API will return data about all ATMs in the specified country. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return data about all ATMs in the specified country. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_atms_country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_atms_country__country__town__town_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_atms_country__country__town__town_.js",
+            "title": "This extended API will return data about all ATMs in the specified town. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return data about all ATMs in the specified town. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_atms_country__country__town__town_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_atms_geo_location_lat__latitude__long__longitude_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_atms_geo_location_lat__latitude__long__longitude_.js",
+            "title": "This extended API will data about all ATMs within a specified radius (1 to 10 miles) of the specified latitude and longitude. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will data about all ATMs within a specified radius (1 to 10 miles) of the specified latitude and longitude. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_atms_geo_location_lat__latitude__long__longitude_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_atms_postcode__postcode_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_atms_postcode__postcode_.js",
+            "title": "This extended API will return data about all ATMs within a 5 mile radius of the specified postcode. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return data about all ATMs within a 5 mile radius of the specified postcode. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_atms_postcode__postcode_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_branches_country__country_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_branches_country__country_.js",
+            "title": "This extended API will return the branch details for all branches in the specified country. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return the branch details for all branches in the specified country. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_branches_country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_branches_country__country__town__town_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_branches_country__country__town__town_.js",
+            "title": "This extended API will return the branch details for all branches in the specified town. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return the branch details for all branches in the specified town. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_branches_country__country__town__town_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_branches_geo_location_lat__latitude__long__longitude_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_branches_geo_location_lat__latitude__long__longitude_.js",
+            "title": "This API will return the branch details for all branches within a specified radius (1 to 10 miles) of the specified latitude and longitude. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This API will return the branch details for all branches within a specified radius (1 to 10 miles) of the specified latitude and longitude. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_branches_geo_location_lat__latitude__long__longitude_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_branches_postcode__postcode_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_branches_postcode__postcode_.js",
+            "title": "This extended API will return the branch details for all branches within a 5 mile radius of the specified postcode. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return the branch details for all branches within a 5 mile radius of the specified postcode. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_branches_postcode__postcode_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_branches_sortcode__sortcode_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_branches_sortcode__sortcode_.js",
+            "title": "This extended API will return the branch details for a branch specified by its sort code. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return the branch details for a branch specified by its sort code. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_branches_sortcode__sortcode_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_business_current_accounts_segment__segment_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_business_current_accounts_segment__segment_.js",
+            "title": "This extended API will return data about all BCA products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return data about all BCA products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_business_current_accounts_segment__segment_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_commercial_credit_cards_segment__segment_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_commercial_credit_cards_segment__segment_.js",
+            "title": "This extended API will return data about all commercial credit cards products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return data about all commercial credit cards products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_commercial_credit_cards_segment__segment_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_personal_current_accounts_segment__segment_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_personal_current_accounts_segment__segment_.js",
+            "title": "This extended API will return data about all PCA products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return data about all PCA products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_personal_current_accounts_segment__segment_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_x_open_banking_v1_2_unsecured_sme_loans_segment__segment_": {
+            "main": "./lib/actions/get_x_open_banking_v1_2_unsecured_sme_loans_segment__segment_.js",
+            "title": "This extended API will return data about all SME lending products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "description": "This extended API will return data about all SME lending products for the specified segment. It is based-on the Open Banking standards as defined by the Open Banking Implementation Entity (OBIE) in data dictionary version 1.2.4. The extended functionality may not fully adhere to the non-functional requirements of the regulator. Data is only available for the United Kingdom.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_x_open_banking_v1_2_unsecured_sme_loans_segment__segment_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

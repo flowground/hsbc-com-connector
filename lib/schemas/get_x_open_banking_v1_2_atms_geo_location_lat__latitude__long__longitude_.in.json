@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "latitude": {
+            "required": true,
+            "type": "string"
+        },
+        "longitude": {
+            "required": true,
+            "type": "string"
+        },
+        "radius": {
+            "required": true,
+            "type": "number"
+        }
+    }
+}
